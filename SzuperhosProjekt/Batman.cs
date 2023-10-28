@@ -3,10 +3,39 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SzuperhosProjekt;
 
-namespace SzuperhosProjekt
+public class Batman : ISzuperhos, IMilliardos
 {
-    internal class Batman
+    private double lelemenyesseg;
+
+    public Batman()
     {
+        lelemenyesseg = 100;
+    }
+
+    public void KutyutKeszit()
+    {
+        lelemenyesseg += 50;
+    }
+
+    public bool LegyoziE(ISzuperhos szuperhos)
+    {
+        if (lelemenyesseg > szuperhos.MekkoraAzEreje())
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public double MekkoraAzEreje()
+    {
+        return lelemenyesseg * 2;
+    }
+
+
+    public override string ToString()
+    {
+        return $"Batman: leleményesség: {lelemenyesseg}";
     }
 }
