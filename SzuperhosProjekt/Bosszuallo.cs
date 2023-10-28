@@ -30,12 +30,12 @@ namespace SzuperhosProjekt
 
         double ISzuperhos.MekkoraAzEreje()
         {
-            throw new NotImplementedException();
+            return szuperero;
         }
 
         public override string ToString()
         {
-            return $"Vasember:Szupererő:{this.szuperero};{this.vanEGyengesege}";
+            return $"Szupererő: {szuperero}; {(vanEGyengesege ? "van gyengesége" : "nincs gyengesége")}";
         }
 
     }
