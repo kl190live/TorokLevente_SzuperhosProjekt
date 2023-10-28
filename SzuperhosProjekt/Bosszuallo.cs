@@ -23,7 +23,16 @@ namespace SzuperhosProjekt
 
         bool ISzuperhos.LegyoziE(ISzuperhos szuperhos)
         {
-            throw new NotImplementedException();
+            if (szuperhos.GetType() == typeof(Batman) && ((Batman)szuperhos).MekkoraAzEreje() < this.MekkoraAzEreje() * 2)
+            {
+
+                return true;
+            }
+            if (((Bosszuallo)szuperhos).VanEGyengesege && ((Bosszuallo)szuperhos).MekkoraAzEreje() < this.MekkoraAzEreje())
+            {
+                return true;
+            }
+            return false;
         }
 
         public abstract bool MegmentiAVilagot();
