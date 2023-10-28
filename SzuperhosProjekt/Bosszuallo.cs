@@ -26,9 +26,9 @@ namespace SzuperhosProjekt
             throw new NotImplementedException();
         }
 
-        public abstract bool MegmentiAvilagot();
+        public abstract bool MegmentiAVilagot();
 
-        double ISzuperhos.MekkoraAzEreje()
+        public virtual double MekkoraAzEreje()
         {
             return szuperero;
         }
